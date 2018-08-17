@@ -30,7 +30,7 @@ h3 {
 .nav {
   display: inline-block;
   /* flex-direction: row; */
-  /* background-color: #00400E; */
+  background-color: #00400E;
   padding: 15px 0;
 }
 ul {
