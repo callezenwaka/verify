@@ -48,17 +48,12 @@ export default {
         this.loading = 'The title is required'
       } else {
         this.loading = 'Sending clich, please wait . . .'
-        return console.log(this.clich)
-        //await PostService.createPost(this.post)
-        // console.log('Sent successfully')
-        // this.loading = ''
-        // this.$router.push({name: 'Posts'})
-        // console.log(this.post)
-        // this.loading = ''
-        // this.post = {}
-        // console.log(this.post)
-        // console.log('Here')
-        // this.$router.push({name: 'Posts'})
+        let uri = 'http://localhost:3000/cliches'
+        await this.axios.post(uri, this.clich)
+        console.log('Sent successfully')
+        this.loading = ''
+        this.$router.push({name: 'Home'})
+        this.clich = {}
       }
     }
   }
